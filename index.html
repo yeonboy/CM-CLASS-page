@@ -252,7 +252,6 @@
         .bg::before {
             filter: blur(5px);
             transition: all 0.3s ease;
-            box-shadow: -7px 6px 0 0 color-mix(in srgb, var(--theme-500) 40%, transparent), -14px 12px 0 0 color-mix(in srgb, var(--theme-500) 30%, transparent), -21px 18px 4px 0 color-mix(in srgb, var(--theme-500) 25%, transparent), -28px 24px 8px 0 color-mix(in srgb, var(--theme-500) 15%, transparent), -35px 30px 12px 0 color-mix(in srgb, var(--theme-500) 12%, transparent);
         }
 
         .wrap {
@@ -301,7 +300,6 @@
             font-weight: 600;
             transition: all 0.3s ease;
             background: linear-gradient(to bottom, var(--theme-300) 0%, var(--theme-400) 100%);
-            box-shadow: inset -2px 12px 11px -5px var(--theme-200), inset 1px -3px 11px 0px rgb(0 0 0 / 35%);
         }
 
         .text-wrapper {
@@ -371,7 +369,6 @@
         .icon div {
             position: relative;
             width: 24px;
-            box-shadow: -2px 2px 5px var(--theme-400);
             transform: scale(0.9);
             background: linear-gradient(to bottom, var(--white), var(--theme-100));
             animation: swingArrow 1s ease-in-out infinite;
@@ -381,7 +378,6 @@
         .icon div::before {
             transform: rotate(44deg);
             top: 1px;
-            box-shadow: 1px -2px 3px -1px var(--theme-400);
             animation: rotateArrowLine 1s linear infinite;
             animation-play-state: paused;
         }
@@ -389,7 +385,6 @@
         .icon div::after {
             bottom: 1px;
             transform: rotate(316deg);
-            box-shadow: -2px 2px 3px 0 var(--theme-400);
             background: linear-gradient(200deg, var(--white), var(--theme-100));
             animation: rotateArrowLine2 1s linear infinite;
             animation-play-state: paused;
@@ -430,11 +425,10 @@
         .button:active .bg::before {
             filter: blur(5px);
             opacity: 0.7;
-            box-shadow: -7px 6px 0 0 color-mix(in srgb, var(--theme-500) 40%, transparent), -14px 12px 0 0 color-mix(in srgb, var(--theme-500) 25%, transparent), -21px 18px 4px 0 color-mix(in srgb, var(--theme-500) 15%, transparent);
         }
 
         .button:active .content {
-            box-shadow: inset -1px 12px 8px -5px color-mix(in srgb, var(--theme-400) 40%, transparent), inset 0px -3px 8px 0px var(--theme-200);
+            box-shadow: none;
         }
 
         .button:active .words,
