@@ -45,8 +45,10 @@
         }
 
         .tab-button.active {
-            color: #0061ff;
-            border-bottom-color: #0061ff;
+            color: #67e8f9;
+            /* cyan-300 */
+            border-bottom-color: #67e8f9;
+            /* cyan-300 */
         }
 
         .tab-content {
@@ -111,125 +113,6 @@
             white-space: nowrap;
         }
 
-        .content-wrapper {
-            position: relative;
-            z-index: 2;
-        }
-
-        .cards {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            transition: all 0.4s ease-in-out;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card {
-            width: 450px;
-            height: 100px;
-            padding: 0.5rem;
-            border-radius: 12px;
-            backdrop-filter: blur(5px);
-            border-bottom: 3px solid rgba(255, 255, 255, 0.440);
-            border-left: 2px rgba(255, 255, 255, 0.545) outset;
-            box-shadow: -20px 30px 20px rgba(0, 0, 0, 0.15);
-            transition: all .4s;
-            overflow: hidden;
-            color: white;
-            position: relative;
-            cursor: pointer;
-            transform: skewX(10deg);
-        }
-
-        .card:not(:first-child) {
-            margin-top: -20px;
-        }
-
-        .cards:hover .card {
-            margin-top: 15px;
-        }
-
-        .card:hover {
-            height: 200px;
-            transform: skewX(0deg);
-        }
-
-        .cards:hover>.card:not(:hover) {
-            filter: blur(5px);
-            transform: scale(0.95) skewX(10deg);
-        }
-
-        .card.blue-1 {
-            background: rgba(30, 58, 138, 0.7);
-            z-index: 1;
-        }
-
-        .card.white {
-            background: rgba(249, 250, 251, 0.7);
-            color: #1f2937;
-            z-index: 2;
-        }
-
-        .card.blue-3 {
-            background: rgba(59, 130, 246, 0.7);
-            z-index: 3;
-        }
-
-        .align {
-            padding: 0.5rem 1rem;
-            display: flex;
-            flex-direction: row;
-            gap: 5px;
-            align-self: flex-start;
-        }
-
-        .red {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #ff605c;
-        }
-
-        .yellow {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #ffbd44;
-        }
-
-        .green {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #00ca4e;
-        }
-
-        .card .tip {
-            font-size: 1.6em;
-            /* 폰트 크기 증가 */
-            font-weight: 700;
-            text-align: center;
-            margin: 0.5rem;
-            text-shadow: -5px 3px 5px rgba(0, 0, 0, 0.4);
-        }
-
-        .card.white .tip {
-            color: #1f2937;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        }
-
-        .card .second-text {
-            font-size: 1em;
-            line-height: 1.6;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .card.white .second-text {
-            color: #374151;
-        }
-
         .highlight {
             background: linear-gradient(to top, rgba(59, 130, 246, 0.4) 40%, transparent 40%);
         }
@@ -272,14 +155,10 @@
         .slider .slide img {
             width: 100%;
             transition: transform 0.3s ease;
-            filter: grayscale(100%);
-            opacity: 0.6;
         }
 
         .slider .slide:hover img {
-            filter: grayscale(0%);
-            opacity: 1;
-            transform: translateZ(10px);
+            transform: translateZ(10px) scale(1.05);
         }
 
         .noto-sans-font {
@@ -751,53 +630,30 @@
         </section>
 
         <!-- Section 2: The Problem -->
-        <section id="problem" class="problem-section-container pt-32 pb-40 px-8">
+        <section id="problem" class="problem-section-container pt-36 pb-48 px-8">
             <h1 class="background-text" data-aos="fade-up">Problem</h1>
-            <div class="text-center max-w-3xl mx-auto mb-24" data-aos="fade-up">
+            <div class="text-center max-w-3xl mx-auto mb-28" data-aos="fade-up">
                 <h2 class="section-title text-gray-900">데이터의 가치는 <span class="gradient-text">'신뢰도'</span><span
-                        class="text-gray-900">와</span> <span class="gradient-text">'분석 속도'</span>가<br>결정합니다.</h2>
-                <p class="mt-6 text-lg text-gray-600">최고의 연구 성과는 결국 데이터로 증명됩니다.<br>하지만 많은 연구자들이 분석 과정에서 다음과 같은 현실적인 과제에
+                        class="text-gray-900">와</span> <span class="gradient-text">'분석 속도'</span>가 결정합니다.</h2>
+                <p class="mt-6 text-xl text-gray-600">최고의 연구 성과는 결국 데이터로 증명됩니다. 하지만 많은 연구자들이 분석 과정에서 다음과 같은 현실적인 과제에
                     직면합니다.</p>
             </div>
-            <div class="content-wrapper max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <!-- 좌측 텍스트 컨텐츠 -->
-                <div data-aos="fade-right">
-                    <h2 class="text-3xl md:text-3xl font-bold text-gray-800 mt-2">성공적인 연구를 가로막는 현실적 과제</h2>
-                    <p class="mt-4 text-gray-600 leading-relaxed">
-                        최고의 연구 성과는 결국 데이터로 증명됩니다. 하지만 많은 연구자들이 분석 과정에서<br>다음과 같은 세가지 현실적인 과제에 직면합니다.
-                    </p>
-                </div>
-                <!-- 우측 카드 컨텐츠 -->
-                <div class="flex items-center justify-center" data-aos="fade-left">
-                    <div class="cards">
-                        <div class="card blue-1">
-                            <div class="align">
-                                <span class="red"></span>
-                                <span class="yellow"></span>
-                                <span class="green"></span>
-                            </div>
-                            <p class="tip">데이터 신뢰도</p>
-                            <p class="second-text">분석 결과의 미세한 오차나 낮은 재현성으로 인해 연구 방향 전체가 흔들리는 문제</p>
-                        </div>
-                        <div class="card white">
-                            <div class="align">
-                                <span class="red"></span>
-                                <span class="yellow"></span>
-                                <span class="green"></span>
-                            </div>
-                            <p class="tip">분석 소요 기간</p>
-                            <p class="second-text">결과 보고가 지연되면서 후속 연구, 논문 제출, 과제 마감 등 핵심 일정이 지체되는 문제</p>
-                        </div>
-                        <div class="card blue-3">
-                            <div class="align">
-                                <span class="red"></span>
-                                <span class="yellow"></span>
-                                <span class="green"></span>
-                            </div>
-                            <p class="tip">외부 의뢰의 번거로움</p>
-                            <p class="second-text">하나의 프로젝트에도 여러 분석 항목이 필요할 때, 각각의 장비를 보유한 기관을 따로 찾아 시료를 나눠 보내야 하는 비효율적인
-                                문제</p>
-                        </div>
+            <div class="content-wrapper max-w-7xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-blue-900/80 text-white p-8 rounded-xl shadow-2xl h-full flex flex-col justify-center items-center text-center">
+                        <h3 class="text-2xl font-bold mb-4">데이터 신뢰도</h3>
+                        <p>분석 결과의 미세한 오차나 낮은 재현성으로 인해 연구 방향 전체가 흔들리는 문제</p>
+                    </div>
+                    <div
+                        class="bg-white border border-gray-200 p-8 rounded-xl shadow-2xl h-full flex flex-col justify-center items-center text-center">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">분석 소요 기간</h3>
+                        <p class="text-gray-600">결과 보고가 지연되면서 후속 연구, 논문 제출, 과제 마감 등 핵심 일정이 지체되는 문제</p>
+                    </div>
+                    <div
+                        class="bg-blue-500/80 text-white p-8 rounded-xl shadow-2xl h-full flex flex-col justify-center items-center text-center">
+                        <h3 class="text-2xl font-bold mb-4">외부 의뢰의 번거로움</h3>
+                        <p>하나의 프로젝트에도 여러 분석 항목이 필요할 때, 각각의 장비를 보유한 기관을 따로 찾아 시료를 나눠 보내야 하는 비효율적인 문제</p>
                     </div>
                 </div>
             </div>
@@ -812,15 +668,24 @@
                     시간과 연구의 성공을 위해, 3가지 핵심 원칙으로 움직입니다.</p>
             </div>
             <div class="mt-16 grid md:grid-cols-3 gap-8 text-center max-w-7xl mx-auto">
-                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 flex flex-col items-center"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://i.imgur.com/8ygbjKA.png" alt="특화된 전문성 아이콘" class="w-16 h-16 mb-4"
+                        style="filter: brightness(0) invert(1);">
                     <h3 class="text-xl font-bold mb-3 text-cyan-300">특화된 전문성</h3>
                     <p class="text-white">환경 매질별로 완벽히 분리된 분석 시스템으로 첫 분석부터 신뢰도 높은 데이터를 약속합니다.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 flex flex-col items-center"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://i.imgur.com/VSMQ2PF.png" alt="압도적인 인프라 아이콘" class="w-16 h-16 mb-4"
+                        style="filter: brightness(0) invert(1);">
                     <h3 class="text-xl font-bold mb-3 text-cyan-300">압도적인 인프라</h3>
                     <p class="text-white">국내 최고 수준의 고도 분석 장비 라인업으로 모든 분석을 한 곳에서, 더 빠르게 끝낼 수 있습니다.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 flex flex-col items-center"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://i.imgur.com/eWees0O.png" alt="투명한 품질관리 아이콘" class="w-16 h-16 mb-4"
+                        style="filter: brightness(0) invert(1);">
                     <h3 class="text-xl font-bold mb-3 text-cyan-300">투명한 품질관리</h3>
                     <p class="text-white">새롭게 도입된 Express 분석 서비스로 귀사의 결정적인 순간을 놓치지 않도록 돕습니다.</p>
                 </div>
@@ -828,22 +693,22 @@
         </section>
 
         <!-- Section 4: The Proof (System) -->
-        <section id="proof" class="py-20 md:py-28 bg-white px-6 sm:px-10 lg:px-16">
+        <section id="proof" class="py-20 md:py-28 bg-gray-900 text-white px-6 sm:px-10 lg:px-16">
             <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
-                <h2 class="section-title text-gray-900">결과의 차이를 만드는 <br class="md:hidden"><span
-                        class="gradient-text">CLASS</span>의 <strong>시스템</strong></h2>
-                <p class="mt-6 text-lg text-gray-600">인프라, 전문성, 그리고 품질관리. 데이터의 가치를 증명하는 CLASS의 모든 것입니다.</p>
+                <h2 class="section-title text-white">결과의 차이를 만드는 <span class="text-white font-black">CLASS</span>의
+                    <strong>시스템</strong></h2>
+                <p class="mt-6 text-lg text-gray-300">인프라, 전문성, 그리고 품질관리. 데이터의 가치를 증명하는 CLASS의 모든 것입니다.</p>
             </div>
 
             <div class="mt-16 max-w-5xl mx-auto" data-aos="fade-up">
-                <div class="border-b border-gray-200 mb-8">
+                <div class="border-b border-gray-700 mb-8">
                     <nav class="flex justify-center -mb-px space-x-6 md:space-x-12" id="proof-tabs">
                         <button data-tab="infrastructure"
-                            class="tab-button text-lg font-semibold p-4 border-b-2 border-transparent text-gray-500 hover:text-blue-600 active">인프라</button>
+                            class="tab-button text-gray-400 hover:text-white p-4 border-b-2 border-transparent active">인프라</button>
                         <button data-tab="expertise"
-                            class="tab-button text-lg font-semibold p-4 border-b-2 border-transparent text-gray-500 hover:text-blue-600">전문성</button>
+                            class="tab-button text-gray-400 hover:text-white p-4 border-b-2 border-transparent">전문성</button>
                         <button data-tab="reliability"
-                            class="tab-button text-lg font-semibold p-4 border-b-2 border-transparent text-gray-500 hover:text-blue-600">품질관리</button>
+                            class="tab-button text-gray-400 hover:text-white p-4 border-b-2 border-transparent">품질관리</button>
                     </nav>
                 </div>
 
@@ -871,41 +736,40 @@
                                             d="M9 5l7 7-7 7" />
                                     </svg>
                                 </button>
-                                <div id="caption" class="text-center mt-4 text-lg font-semibold text-gray-800"></div>
+                                <div id="caption" class="text-center mt-4 text-lg font-semibold text-gray-200"></div>
                             </div>
                             <div>
                                 <h3 class="text-2xl font-bold mb-4">압도적인 분석 인프라</h3>
-                                <p class="text-gray-600 mb-6">최상의 결과는 최상의 장비와 환경에서 시작됩니다. 미량분석 전용 클린룸 운영으로 오염을 원천 차단하고,
+                                <p class="text-gray-300 mb-6">최상의 결과는 최상의 장비와 환경에서 시작됩니다. 미량분석 전용 클린룸 운영으로 오염을 원천 차단하고,
                                     대량 시료도 신속하고 안정적으로 처리합니다.</p>
                                 <ul class="space-y-4">
                                     <li class="flex items-start">
-                                        <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                        <svg class="w-6 h-6 text-cyan-300 mr-3 flex-shrink-0 mt-1" fill="none"
                                             stroke="currentColor" viewBox="0 0 24 24"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                         </svg>
-                                        <span><strong class="text-gray-800">미량분석 전용 클린룸:</strong> 데이터 순도 보장</span>
+                                        <span><strong class="text-white">미량분석 전용 클린룸:</strong> 데이터 순도 보장</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                        <svg class="w-6 h-6 text-cyan-300 mr-3 flex-shrink-0 mt-1" fill="none"
                                             stroke="currentColor" viewBox="0 0 24 24"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                         </svg>
-                                        <span><strong class="text-gray-800">최고 수준 장비 라인업:</strong> GC/MS, ICP-MS 등 다수
+                                        <span><strong class="text-white">최고 수준 장비 라인업:</strong> GC/MS, ICP-MS 등 다수
                                             보유</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                        <svg class="w-6 h-6 text-cyan-300 mr-3 flex-shrink-0 mt-1" fill="none"
                                             stroke="currentColor" viewBox="0 0 24 24"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                         </svg>
-                                        <span><strong class="text-gray-800">대량 시료 처리 능력:</strong> 30년 노하우와 자동화
-                                            시스템</span>
+                                        <span><strong class="text-white">대량 시료 처리 능력:</strong> 30년 노하우와 자동화 시스템</span>
                                     </li>
                                 </ul>
                             </div>
@@ -920,36 +784,35 @@
                             </div>
                             <div>
                                 <h3 class="text-2xl font-bold mb-4">대체 불가능한 전문성</h3>
-                                <p class="text-gray-600 mb-6">가장 잘하는 '환경' 분야에만 집중합니다. 매질별 전담 조직과 10년 이상 경력의 전문가 그룹이 가장
+                                <p class="text-gray-300 mb-6">가장 잘하는 '환경' 분야에만 집중합니다. 매질별 전담 조직과 10년 이상 경력의 전문가 그룹이 가장
                                     복잡하고 까다로운 시료도 정확하게 처리합니다.</p>
                                 <ul class="space-y-4">
                                     <li class="flex items-start">
-                                        <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                        <svg class="w-6 h-6 text-cyan-300 mr-3 flex-shrink-0 mt-1" fill="none"
                                             stroke="currentColor" viewBox="0 0 24 24"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                         </svg>
-                                        <span><strong class="text-gray-800">환경 매질별 전담 조직:</strong> 교차오염 원천 차단</span>
+                                        <span><strong class="text-white">환경 매질별 전담 조직:</strong> 교차오염 원천 차단</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                        <svg class="w-6 h-6 text-cyan-300 mr-3 flex-shrink-0 mt-1" fill="none"
                                             stroke="currentColor" viewBox="0 0 24 24"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                         </svg>
-                                        <span><strong class="text-gray-800">10년 이상 경력 전문가 그룹:</strong> 박사, 석사,
-                                            측정분석사</span>
+                                        <span><strong class="text-white">10년 이상 경력 전문가 그룹:</strong> 박사, 석사, 측정분석사</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                        <svg class="w-6 h-6 text-cyan-300 mr-3 flex-shrink-0 mt-1" fill="none"
                                             stroke="currentColor" viewBox="0 0 24 24"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                         </svg>
-                                        <span><strong class="text-gray-800">3만 건 이상 프로젝트 경험:</strong> 최적의 솔루션 제공</span>
+                                        <span><strong class="text-white">3만 건 이상 프로젝트 경험:</strong> 최적의 솔루션 제공</span>
                                     </li>
                                 </ul>
                             </div>
@@ -958,25 +821,25 @@
                     <!-- Reliability Tab -->
                     <div id="reliability" class="tab-content">
                         <div class="text-center mb-12">
-                            <h3 class="text-2xl font-bold mb-6">데이터 <span class="highlight">신뢰도</span>를 위한 원칙 <span
-                                    class="text-sm text-gray-500 font-medium">(Principles for Data Reliability)</span>
+                            <h3 class="text-2xl font-bold mb-4">데이터 <span class="highlight">신뢰도</span>를 위한 원칙 <span
+                                    class="text-sm text-gray-400 font-medium">(Principles for Data Reliability)</span>
                             </h3>
-                            <p class="text-gray-600 max-w-2xl mx-auto text-lg">우리의 주장은 객관적인 제3자 평가로 증명됩니다.</p>
+                            <p class="text-gray-300 max-w-2xl mx-auto text-lg">우리의 주장은 객관적인 제3자 평가로 증명됩니다.</p>
                         </div>
                         <div class="grid md:grid-cols-3 gap-8 text-center">
-                            <div class="bg-gray-100 p-8 rounded-xl shadow-md">
-                                <h3 class="text-xl font-bold mb-3 text-blue-800">체계적인 오차 관리</h3>
-                                <p class="text-gray-600">주요 분석 장비의 정기 검교정은 물론, 시험에 사용하는 모든 초자류 및 피펫의 정도관리를 통해 분석 과정의 잠재적
+                            <div class="bg-gray-800 p-8 rounded-xl shadow-md">
+                                <h3 class="text-xl font-bold mb-3 text-cyan-300">체계적인 오차 관리</h3>
+                                <p class="text-gray-300">주요 분석 장비의 정기 검교정은 물론, 시험에 사용하는 모든 초자류 및 피펫의 정도관리를 통해 분석 과정의 잠재적
                                     오차를 시스템으로 관리합니다.</p>
                             </div>
-                            <div class="bg-gray-100 p-8 rounded-xl shadow-md">
-                                <h3 class="text-xl font-bold mb-3 text-blue-800">지속적인 역량 검증</h3>
-                                <p class="text-gray-600">매년 국내외 공인 숙련도 시험에 참가하며, 담당자가 변경될 때마다 내부 숙련도 평가를 통해 분석 능력을 최상으로
+                            <div class="bg-gray-800 p-8 rounded-xl shadow-md">
+                                <h3 class="text-xl font-bold mb-3 text-cyan-300">지속적인 역량 검증</h3>
+                                <p class="text-gray-300">매년 국내외 공인 숙련도 시험에 참가하며, 담당자가 변경될 때마다 내부 숙련도 평가를 통해 분석 능력을 최상으로
                                     유지합니다.</p>
                             </div>
-                            <div class="bg-gray-100 p-8 rounded-xl shadow-md">
-                                <h3 class="text-xl font-bold mb-3 text-blue-800">국제적/국가적 공신력</h3>
-                                <p class="text-gray-600">국제숙련도 수질분야 최우수기관, 환경측정대행업 용역이행능력평가 우수기관 선정 및 정부기관 수상 실적이 데이터의
+                            <div class="bg-gray-800 p-8 rounded-xl shadow-md">
+                                <h3 class="text-xl font-bold mb-3 text-cyan-300">국제적/국가적 공신력</h3>
+                                <p class="text-gray-300">국제숙련도 수질분야 최우수기관, 환경측정대행업 용역이행능력평가 우수기관 선정 및 정부기관 수상 실적이 데이터의
                                     신뢰성을 보증합니다.</p>
                             </div>
                         </div>
@@ -991,7 +854,7 @@
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-800">고객사의 <span class="gradient-text">신뢰</span>가 가장
                     확실한 증거입니다.</h2>
                 <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
-                    학계부터 산업, 공공 영역까지, 분야를 선도하는 리더들이 중요한 연구의 파트너로<br>CLASS를 신뢰하고 있습니다.
+                    학계부터 산업, 공공 영역까지, 분야를 선도하는 리더들이 중요한 연구의 파트너로 CLASS를 신뢰하고 있습니다.
                 </p>
                 <div class="mt-16">
                     <div class="flex flex-col items-center justify-center gap-6">
@@ -1048,12 +911,11 @@
                 <div class="text-center max-w-3xl mx-auto px-4" data-aos="fade-up">
                     <h2 class="section-title text-white">환경 매질에 대한<br class="md:hidden"> 가장 <span
                             class="text-cyan-300">깊이 있는 분석</span></h2>
-                    <p class="mt-6 text-lg text-gray-200"><strong>CLASS</strong>는 단순 성분 분석을 넘어,<br>각 환경 매질의 복잡한 특성과
-                        상호작용을 이해하는 깊이 있는 데이터를
+                    <p class="mt-6 text-lg text-gray-200">CLASS는 단순 성분 분석을 넘어, 각 환경 매질의 복잡한 특성과 상호작용을 이해하는 깊이 있는 데이터를
                         제공합니다.</p>
                 </div>
                 <div class="relative mt-20" style="top: 8vh;" data-aos="fade-up" data-aos-delay="200">
-                    <p class="text-center text-gray-180 mb-9">각 아이콘을 클릭하여 자세한 내용을 알아보세요.</p>
+                    <p class="text-center text-gray-200 mb-8">각 아이콘을 클릭하여 자세한 내용을 알아보세요.</p>
                     <div class="button-container">
                         <!-- Button 1: Water -->
                         <a href="http://r1418.realserver3.com/sub/business02.php" target="_blank"
@@ -1162,7 +1024,7 @@
                     style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">지금 바로 최적의 분석 솔루션을 제안받으십시오.</h2>
                 <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto"
                     style="text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">
-                    귀사의 연구 목표와 일정에 가장 부합하는 분석 방법, 비용, 그리고<br>예상 소요 기간을 전문가가 직접 설계해 드립니다.
+                    귀사의 연구 목표와 일정에 가장 부합하는 분석 방법, 비용, 그리고 예상 소요 기간을 전문가가 직접 설계해 드립니다.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a href="http://r1418.realserver3.com/bsr/board.php?bo_table=contact" target="_blank"
